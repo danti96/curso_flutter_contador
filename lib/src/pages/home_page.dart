@@ -5,24 +5,32 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Titulo'),
-          centerTitle: true,
+      appBar: AppBar(
+        title: Text('Titulo'),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Número de tabs:",
+              style: estiloTexto,
+            ),
+            Text(
+              "0",
+              style: estiloTexto,
+            ),
+          ],
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Número de tabs:",
-                style: estiloTexto,
-              ),
-              Text(
-                "0",
-                style: estiloTexto,
-              ),
-            ],
-          ),
-        ));
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          print("hola mundo");
+        },
+      ),
+    );
   }
 }
